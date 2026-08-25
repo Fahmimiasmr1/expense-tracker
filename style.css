@@ -1,0 +1,544 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f5efe6;
+
+    color: #3e2c23;
+
+    min-height: 100vh;
+}
+
+
+.container {
+    width: 92%;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 40px 0;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.subtitle {
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #8b6f5a;
+
+    margin-bottom: 8px;
+}
+
+
+header h1 {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+
+.description {
+    color: #806b5c;
+}
+
+
+/* =========================
+   BALANCE
+========================= */
+
+.balance-card {
+
+    background: #5c4033;
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+
+    animation: slideDown 0.5s ease;
+}
+
+
+.balance-card p {
+
+    opacity: 0.75;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+}
+
+
+.balance-card h2 {
+
+    font-size: 36px;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.stat-card {
+
+    background: #fffaf3;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.05);
+
+    transition: 0.25s;
+}
+
+
+.stat-card:hover {
+
+    transform: translateY(-3px);
+}
+
+
+.icon {
+
+    font-size: 28px;
+}
+
+
+.stat-card p {
+
+    font-size: 12px;
+
+    color: #8c7565;
+
+    margin-bottom: 5px;
+}
+
+
+.stat-card h3 {
+
+    font-size: 16px;
+}
+
+
+.income h3 {
+
+    color: #47704c;
+}
+
+
+.expense h3 {
+
+    color: #a24d3d;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.form-card,
+.history-card {
+
+    background: #fffaf3;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+.form-card h2,
+.history-card h2 {
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+label {
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+input,
+select {
+
+    padding: 14px;
+
+    border: 1px solid #dbcdbd;
+
+    border-radius: 10px;
+
+    margin-bottom: 16px;
+
+    font-size: 15px;
+
+    background: white;
+}
+
+
+input:focus,
+select:focus {
+
+    outline: 2px solid #9b795f;
+}
+
+
+form button {
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: #5c4033;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    border: none;
+
+    transition: 0.25s;
+}
+
+
+form button:hover {
+
+    background: #704e3d;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.section-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.section-title h2 {
+
+    margin-bottom: 0;
+}
+
+
+.clear-button {
+
+    background: #eadbd0;
+
+    color: #6b4636;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.clear-button:hover {
+
+    background: #dec8b9;
+}
+
+
+/* =========================
+   TRANSACTION
+========================= */
+
+.transaction {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #eadfd4;
+
+    animation: appear 0.3s ease;
+}
+
+
+.transaction-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.transaction-name {
+
+    font-weight: bold;
+}
+
+
+.transaction-category {
+
+    font-size: 12px;
+
+    color: #8c7565;
+}
+
+
+.transaction-date {
+
+    font-size: 11px;
+
+    color: #a59486;
+}
+
+
+.transaction-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.transaction-amount {
+
+    font-weight: bold;
+}
+
+
+.transaction-amount.income {
+
+    color: #47704c;
+}
+
+
+.transaction-amount.expense {
+
+    color: #a24d3d;
+}
+
+
+.delete-button {
+
+    background: #f0dcd2;
+
+    color: #8b4f3a;
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 8px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+.empty {
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #9a887a;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes slideDown {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .container {
+
+        width: 92%;
+
+        padding: 25px 0;
+
+    }
+
+
+    header h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .balance-card h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .form-card,
+    .history-card {
+
+        padding: 20px;
+
+    }
+
+
+    .transaction {
+
+        align-items: flex-start;
+
+    }
+
+
+    .transaction-right {
+
+        flex-direction: column;
+
+        align-items: flex-end;
+
+    }
+
+}

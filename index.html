@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Finance</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header>
+            <p class="subtitle">PERSONAL FINANCE</p>
+
+            <h1>Keuangan Saya 💰</h1>
+
+            <p class="description">
+                Kelola pemasukan dan pengeluaranmu dengan mudah.
+            </p>
+        </header>
+
+
+        <!-- SALDO -->
+        <section class="balance-card">
+
+            <p>Saldo Saat Ini</p>
+
+            <h2 id="balance">
+                Rp 0
+            </h2>
+
+        </section>
+
+
+        <!-- STATISTIK -->
+        <div class="stats">
+
+            <div class="stat-card income">
+
+                <span class="icon">
+                    📈
+                </span>
+
+                <div>
+                    <p>Total Pemasukan</p>
+
+                    <h3 id="income">
+                        Rp 0
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card expense">
+
+                <span class="icon">
+                    📉
+                </span>
+
+                <div>
+                    <p>Total Pengeluaran</p>
+
+                    <h3 id="expense">
+                        Rp 0
+                    </h3>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+        <section class="form-card">
+
+            <h2>Tambah Transaksi</h2>
+
+            <form id="transactionForm">
+
+                <!-- JENIS -->
+                <label for="type">
+                    Jenis Transaksi
+                </label>
+
+                <select id="type">
+
+                    <option value="income">
+                        📈 Pemasukan
+                    </option>
+
+                    <option value="expense">
+                        📉 Pengeluaran
+                    </option>
+
+                </select>
+
+
+                <!-- NAMA -->
+                <label for="name">
+                    Nama Transaksi
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Contoh: Uang bulanan"
+                    required
+                >
+
+
+                <!-- NOMINAL -->
+                <label for="amount">
+                    Nominal
+                </label>
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Contoh: 500000"
+                    min="1"
+                    required
+                >
+
+
+                <!-- KATEGORI -->
+                <label for="category">
+                    Kategori
+                </label>
+
+                <select id="category">
+
+                    <option value="Gaji / Uang Bulanan">
+                        💰 Gaji / Uang Bulanan
+                    </option>
+
+                    <option value="Makanan">
+                        🍜 Makanan
+                    </option>
+
+                    <option value="Transportasi">
+                        🚌 Transportasi
+                    </option>
+
+                    <option value="Belanja">
+                        🛒 Belanja
+                    </option>
+
+                    <option value="Hiburan">
+                        🎮 Hiburan
+                    </option>
+
+                    <option value="Pendidikan">
+                        📚 Pendidikan
+                    </option>
+
+                    <option value="Lainnya">
+                        📦 Lainnya
+                    </option>
+
+                </select>
+
+
+                <button type="submit">
+                    + Tambah Transaksi
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- RIWAYAT -->
+        <section class="history-card">
+
+            <div class="section-title">
+
+                <h2>
+                    Riwayat Transaksi
+                </h2>
+
+                <button
+                    id="clearAll"
+                    class="clear-button"
+                >
+                    Hapus Semua
+                </button>
+
+            </div>
+
+
+            <div id="transactionList">
+
+                <div class="empty">
+
+                    Belum ada transaksi.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
